@@ -2,516 +2,411 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Perfume for Ladies</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    :root {
-      --gold: #c5a059;
-      --dark: #1a1a1a;
-      --light: #f4f4f4;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes for Gentlemen</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --soft-white: #fefefe;
+        }
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        body {
+            background-color: var(--soft-white);
+        }
 
-    /* Make the hamburger/toggler lines gold */
-    .navbar-toggler {
-      border-color: var(--gold) !important;
-    }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30' stroke='%23c5a059'><path stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
-      background-size: 1.5em 1.5em;
-      background-position: center;
-    }
+        /* Make the hamburger/toggler lines gold */
+        .navbar-toggler {
+            border-color: var(--gold) !important;
+        }
 
-    .card {
-      border: none;
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
-      background-color: #fff;
-    }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30' stroke='%23c5a059'><path stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
+            background-size: 1.5em 1.5em;
+            background-position: center;
+        }
 
-    .card-img {
-      width: 150px;
-      height: auto;
-      object-fit: cover;
-      margin: auto;
-    }
+        .dropdown-menu-columns {
+            column-count: 2;
+        }
 
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-top: 10px;
-    }
 
-    .card-price {
-      color: var(--gold);
-      font-weight: bold;
-      margin-top: 5px;
-      margin-bottom: 10px;
-    }
+        .card {
+            border: none;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+            background-color: #fff;
+        }
 
-    .card-text {
-      font-size: 0.9rem;
-      color: #555;
-    }
+        .card-img {
+            width: 150px;
+            height: auto;
+            object-fit: cover;
+            margin: auto;
+        }
 
-    .product-card {
-      cursor: pointer;
-    }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
 
-    .product-card:hover {
-      transform: translateY(-3px);
-      transition: 0.2s;
-    }
+        .card-price {
+            font-size: 1rem;
+            color: var(--gold);
+            margin-top: 5px;
+        }
 
-    /* Custom modal styling */
-    .modal .modal-content.custom-modal {
-      background: linear-gradient(180deg, #ffffff 0%, #fbf8f2 100%);
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-      overflow: hidden;
-    }
+        .card-text {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 8px;
+        }
 
-    .modal-header {
-      border-bottom: none;
-      padding-bottom: 0.5rem;
-    }
+        .product-card {
+            cursor: pointer;
+        }
 
-    .modal-title {
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 1.25rem;
-    }
+        .product-card:hover {
+            transform: translateY(-3px);
+            transition: 0.2s;
+        }
 
-    .btn-close {
-      filter: none;
-      opacity: 0.9;
-    }
 
-    .modal-body {
-      padding-top: 0;
-    }
 
-    .modal-image {
-      width: 100%;
-      height: auto;
-      max-height: 380px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-    }
+        /* Custom modal styling */
+        .modal .modal-content.custom-modal {
+            background: var(--soft-white);
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
 
-    .modal-price {
-      color: var(--gold);
-      font-weight: 800;
-      font-size: 1.25rem;
-      margin-bottom: .5rem;
-    }
+        .modal-header {
+            border-bottom: none;
+            padding: 1.5rem 1.5rem 0.5rem;
+        }
 
-    .modal-description {
-      color: #333;
-      line-height: 1.45;
-    }
+        .modal-title {
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            /* Optional: adds luxury feel */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
 
-    /* Footer buttons */
-    .modal-footer {
-      border-top: none;
-      display: flex;
-      gap: .5rem;
-      justify-content: flex-end;
-      padding-top: .5rem;
-    }
+        .modal-body {
+            padding: 1rem 2rem 2rem;
+        }
 
-    .btn-primary {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: #111;
-      box-shadow: 0 6px 18px rgba(197, 160, 89, 0.18);
-    }
+        .modal-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.5s ease;
+        }
 
-    /* Entrance animation: subtle translate + scale */
-    .modal.fade .modal-dialog {
-      transform: translateY(-10%) scale(.98);
-      transition: transform .25s cubic-bezier(.2, .8, .2, 1);
-    }
+        .modal-image:hover {
+            transform: scale(1.02);
+        }
 
-    .modal.show .modal-dialog {
-      transform: translateY(0) scale(1);
-    }
+        .modal-brand {
+            font-family: 'Times New Roman', serif;
+            font-size: 3rem;
+            font-weight: 500;
+            margin-bottom: 0;
+            color: var(--dark);
+        }
 
-    footer {
-      background: var(--dark);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+        .modal-price {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-    footer a {
-      color: var(--gold);
-    }
-  </style>
+        .modal-description {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-ingredients {
+            list-style: none;
+            padding-left: 0;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-ingredients li {
+            padding: 2px 0;
+            color: #444;
+        }
+
+        .modal-ingredients li::before {
+            content: "•";
+            color: var(--gold);
+            padding-right: 8px;
+        }
+
+        .modal-review {
+            font-style: italic;
+            color: #666;
+            border-left: 2px solid var(--gold);
+            padding-left: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .modal-rating {
+            font-size: 1.1rem;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* Footer buttons */
+        .modal-footer {
+            border-top: 1px solid #eee;
+            padding: 1.25rem 2rem;
+            background: #f9f9f9;
+        }
+
+        .btn-primary {
+            background: var(--dark);
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-secondary {
+            border-radius: 4px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--gold);
+        }
+    </style>
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light"
-    style="background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);;">
-    <div class="container-fluid px-4">
-      <a class="navbar-brand fw-bold" href="../index.html"
-        style="font-size: 1.5rem; letter-spacing: 1px; color: var(--gold) !important;">
-        ✨ PAAREES
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll gap-2" style="--bs-scroll-height: 100px;">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle fw-500" href="#" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" style="color: white;">
-              Brands
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark"
+        style="background: linear-gradient(135deg, var(--dark) 0%, #2a2a2a 100%); box-shadow: 0 2px 8px rgba(0,0,0,0.1);;">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html"
+                style="font-size: 1.5rem; letter-spacing: 1px; color: var(--gold) !important;">
+                <img src="../images/logos/small_dark_logo.png" style="width: 50px; height: 50px;" alt=""> PAAREES
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark" style="background: #2a2a2a; border-color: var(--gold);">
-              <li><a class="dropdown-item" href="../brands/dolce&gabbana.html">Dolce & Gabbana</a></li>
-              <li><a class="dropdown-item" href="../brands/roberto-cavalli.html">Roberto Cavalli</a></li>
-              <li><a class="dropdown-item" href="../brands/yves-saint-laurent.html">Yves Saint Laurent</a></li>
-              <li><a class="dropdown-item" href="../brands/mancera.html">Mancera</a></li>
-              <li><a class="dropdown-item" href="../brands/versace.html">Versace</a></li>
-              <li><a class="dropdown-item" href="../brands/giorgio-armani.html">Giorgio Armani</a></li>
-              <li><a class="dropdown-item" href="../brands/xerjoff.html">Xerjoff</a></li>
-              <li><a class="dropdown-item" href="../brands/chopard.html">Chopard</a></li>
-              <li><a class="dropdown-item" href="../brands/uniqo.html">Uniqo</a></li>
-              <li><a class="dropdown-item" href="../brands/robeto-cavalli.html">Robeto Cavalli</a></li>
-              <li><a class="dropdown-item" href="../brands/boucheron.html">Boucheron</a></li>
-              <li><a class="dropdown-item" href="../brands/mont-blanc.html">Mont Blanc</a></li>
-              <li><a class="dropdown-item" href="../brands/parfums-de-marly.html">Parfums de Marly</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-500" href="../categories/ladies.html"
-              style="color: var(--gold); border-bottom: 2px solid var(--gold);">Ladies</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-500" href="../categories/gents.html" style="color: white;">Gents</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-500" href="../categories/common.html" style="color: white;">Common</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-500" href="../docs/price-list.pdf" download style="color: white;">Price
-              List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-500" href="../index.html#contact" style="color: white;">
-              Contact Us</a>
-          </li>
-        </ul>
-      </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll gap-2" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-500" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" style="color: white;">
+                            Brands
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-columns">
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-500" href="ladies.html" style="color: var(--gold); border-bottom: 2px solid var(--gold);">Ladies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-500" href="gents.html"
+                            style="color: white;">Gents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-500" href="common.html" style="color: white;">Common</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-500" href="../docs/price-list.pdf" download style="color: white;">Price
+                            List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-500" href="../index.html#contact" style="color: white;">
+                            Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            // Highlight the current page in the navbar
+            $.getJSON("../data.json", function (data) {
+                brand_names = [...new Set(data.map(product => product.brand))];
+                console.log(brand_names);
+                brand_names.forEach(brand => {
+                    $(".navbar-nav .dropdown-menu").append(`<li><a class="dropdown-item" href="brand.html?brand=${encodeURIComponent(brand)}">${brand}</a></li>`);
+                });
+            });
+        });
+    </script>
+
+    <!-- PRODUCT-CARDS -->
+    <section class="product-cards my-5">
+        <div class="container">
+            <div class="row g-2"></div>
+    </section>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("../data.json", function (data) {
+                const commonProducts = data.filter(product => product.gender === "Women");
+                let productCardsHtml = '';
+                commonProducts.forEach(product => {
+                    productCardsHtml += `
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+              <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal"
+                data-id="${product.id}">
+                <img src="../images/women/${product.name.toLowerCase()}.jpg" class="card-img-top card-img" alt="${product.description}">
+                <div class="card-body text-center">
+                  <h5 class="card-title">${product.name}</h5>
+                  <p class="card-price">${product.price}</p>
+                  <p class="card-text">${product.description}</p>
+                </div>
+              </div>    
+            </div>
+          `;
+                });
+                $('.product-cards .row').html(productCardsHtml);
+            });
+        });
+    </script>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Fragrance Collection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row g-4 align-items-start">
+                        <div class="col-md-5">
+                            <div class="image-container p-3 bg-light rounded">
+                                <img class="img-fluid modal-image" src="" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-md-7">
+                            <h2 class="modal-brand"></h2>
+                            <div class="modal-price"></div>
+
+                            <p class="modal-description"></p>
+
+                            <h6 class="text-uppercase fw-bold small">Notes & Ingredients:</h6>
+                            <ul class="modal-ingredients"></ul>
+
+                            <div class="modal-review"></div>
+                            <div class="modal-rating"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary px-5 modal-download-btn">Download Detail</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
+    <script>
+        function generateStars(rating, maxStars = 5) {
+            let fullStars = Math.floor(rating);
+            let emptyStars = maxStars - fullStars
 
-  <!-- PRODUCT-CARDS -->
-  <section class="product-cards my-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Product Card 1 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Floral Elegance" data-price="Rs. 13,200"
-            data-description="A delicate blend of roses and jasmine for a timeless feminine scent."
-            data-image="../images/ladies/1.jpg">
+            let stars = '★'.repeat(fullStars);
+            stars += '☆'.repeat(emptyStars);
 
-            <img src="../images/ladies/1.jpg" class="card-img-top" alt="Perfume 1">
+            return stars;
+        }
+        $('#productModal').on('show.bs.modal', function (event) {
+            const button = $(event.relatedTarget);
+            const productId = button.data('id');
+            $.getJSON("../data.json", function (data) {
 
-            <div class="card-body">
-              <h5 class="card-title">Floral Elegance</h5>
-              <h5 class="card-price">Rs. 13,200</h5>
-              <p class="card-text">
-                A delicate blend of roses and jasmine for a timeless feminine scent.
-              </p>
-            </div>
+                const product = data.find(p => p.id === productId);
+                console.log(product);
 
-          </div>
-        </div>
-        <!-- Product Card 2 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Citrus Blossom" data-price="Rs. 10,000"
-            data-description="A refreshing mix of citrus fruits and floral notes for a vibrant aroma."
-            data-image="../images/ladies/2.jpg">
-            <img src="../images/ladies/2.jpg" class="card-img-top card-img" alt="Citrus Blossom">
-            <div class="card-body">
-              <h5 class="card-title">Citrus Blossom</h5>
-              <h5 class="card-price">Rs. 10,000</h5>
-              <p class="card-text">A refreshing mix of citrus fruits and floral notes for a vibrant aroma.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Vanilla Dream" data-price="Rs. 35,100"
-            data-description="A warm and inviting fragrance with hints of vanilla and sandalwood."
-            data-image="../images/ladies/3.jpg">
-            <img src="../images/ladies/3.jpg" class="card-img-top card-img" alt="Vanilla Dream">
-            <div class="card-body">
-              <h5 class="card-title">Vanilla Dream</h5>
-              <h5 class="card-price">Rs. 35,100</h5>
-              <p class="card-text">A warm and inviting fragrance with hints of vanilla and sandalwood.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 4 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Ocean Breeze" data-price="Rs. 12,500"
-            data-description="A fresh and airy scent inspired by the sea, with notes of marine and citrus."
-            data-image="../images/ladies/4.jpg">
-            <img src="../images/ladies/4.jpg" class="card-img-top card-img" alt="Ocean Breeze">
-            <div class="card-body">
-              <h5 class="card-title">Ocean Breeze</h5>
-              <h5 class="card-price">Rs. 12,500</h5>
-              <p class="card-text">A fresh and airy scent inspired by the sea, with notes of marine and citrus.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Spiced Amber" data-price="Rs. 15,000"
-            data-description="A rich and exotic fragrance with amber, cinnamon, and clove notes."
-            data-image="../images/ladies/5.jpg">
-            <img src="../images/ladies/5.jpg" class="card-img-top card-img" alt="Spiced Amber">
-            <div class="card-body">
-              <h5 class="card-title">Spiced Amber</h5>
-              <h5 class="card-price">Rs. 15,000</h5>
-              <p class="card-text">A rich and exotic fragrance with amber, cinnamon, and clove notes.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 6 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Gardenia Bliss" data-price="Rs. 12,000"
-            data-description="A lush and romantic scent featuring gardenia and tuberose."
-            data-image="../images/ladies/6.jpg">
-            <img src="../images/ladies/6.jpg" class="card-img-top card-img" alt="Gardenia Bliss">
-            <div class="card-body">
-              <h5 class="card-title">Gardenia Bliss</h5>
-              <h5 class="card-price">Rs. 12,000</h5>
-              <p class="card-text">A lush and romantic scent featuring gardenia and tuberose.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 7 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Rose Petals" data-price="Rs. 17,500"
-            data-description="A soft and romantic scent with the essence of fresh rose petals."
-            data-image="../images/ladies/7.png">
-            <img src="../images/ladies/7.png" class="card-img-top card-img" alt="Rose Petals">
-            <div class="card-body">
-              <h5 class="card-title">Rose Petals</h5>
-              <h5 class="card-price">Rs. 17,500</h5>
-              <p class="card-text">A soft and romantic scent with the essence of fresh rose petals.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 8 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Lavender Dreams" data-price="Rs. 16,000"
-            data-description="A calming and soothing fragrance with the gentle aroma of lavender."
-            data-image="../images/ladies/8.jpg">
-            <img src="../images/ladies/8.jpg" class="card-img-top card-img" alt="Lavender Dreams">
-            <div class="card-body">
-              <h5 class="card-title">Lavender Dreams</h5>
-              <h5 class="card-price">Rs. 16,000</h5>
-              <p class="card-text">A calming and soothing fragrance with the gentle aroma of lavender.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 9 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Jasmine Whisper" data-price="Rs. 14,000"
-            data-description="A delicate and enchanting scent with the soft fragrance of jasmine."
-            data-image="../images/ladies/9.jpg">
-            <img src="../images/ladies/9.jpg" class="card-img-top card-img" alt="Jasmine Whisper">
-            <div class="card-body">
-              <h5 class="card-title">Jasmine Whisper</h5>
-              <h5 class="card-price">Rs. 14,000</h5>
-              <p class="card-text">A delicate and enchanting scent with the soft fragrance of jasmine.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 10 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Mystic Night" data-price="Rs. 18,000"
-            data-description="A mysterious and captivating scent with notes of night-blooming jasmine and blackberry."
-            data-image="../images/ladies/10.jpg">
-            <img src="../images/ladies/10.jpg" class="card-img-top card-img" alt="Mystic Night">
-            <div class="card-body">
-              <h5 class="card-title">Mystic Night</h5>
-              <h5 class="card-price">Rs. 18,000</h5>
-              <p class="card-text">A mysterious and captivating scent with notes of night-blooming jasmine and
-                blackberry.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 11 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Citrus Burst" data-price="Rs. 23,500"
-            data-description="A vibrant and refreshing scent with notes of lemon, orange, and grapefruit."
-            data-image="../images/ladies/11.jpg">
-            <img src="../images/ladies/11.jpg" class="card-img-top card-img" alt="Citrus Burst">
-            <div class="card-body">
-              <h5 class="card-title">Citrus Burst</h5>
-              <h5 class="card-price">Rs. 23,500</h5>
-              <p class="card-text">A vibrant and refreshing scent with notes of lemon, orange, and grapefruit.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 12 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Peach Blossom" data-price="Rs. 12,000"
-            data-description="A sweet and fruity fragrance with the essence of ripe peaches and floral undertones."
-            data-image="../images/ladies/12.jpg">
-            <img src="../images/ladies/12.jpg" class="card-img-top card-img" alt="Peach Blossom">
-            <div class="card-body">
-              <h5 class="card-title">Peach Blossom</h5>
-              <h5 class="card-price">Rs. 12,000</h5>
-              <p class="card-text">A sweet and fruity fragrance with the essence of ripe peaches and floral undertones.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 13 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Vanilla Dream (II)" data-price="Rs. 15,000"
-            data-description="A warm and comforting scent with the rich aroma of vanilla and a hint of sandalwood."
-            data-image="../images/ladies/13.jpg">
-            <img src="../images/ladies/13.jpg" class="card-img-top card-img" alt="Vanilla Dream II">
-            <div class="card-body">
-              <h5 class="card-title">Vanilla Dream</h5>
-              <h5 class="card-price">Rs. 15,000</h5>
-              <p class="card-text">A warm and comforting scent with the rich aroma of vanilla and a hint of sandalwood.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product Card 14 -->
-        <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="card h-100 product-card" role="button" data-bs-toggle="modal" data-bs-target="#productModal"
-            data-title="Midnight Rose" data-price="Rs. 28,000"
-            data-description="A deep and mysterious scent with the rich aroma of black roses and vanilla."
-            data-image="../images/ladies/14.jpg">
-            <img src="../images/ladies/14.jpg" class="card-img-top card-img" alt="Midnight Rose">
-            <div class="card-body">
-              <h5 class="card-title">Midnight Rose</h5>
-              <h5 class="card-price">Rs. 28,000</h5>
-              <p class="card-text">A deep and mysterious scent with the rich aroma of black roses and vanilla.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Bootstrap Modal -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content custom-modal">
-
-        <div class="modal-header">
-          <h5 class="modal-title" id="productModalLabel"></h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-body">
-          <div class="row g-3 align-items-center">
-            <div class="col-md-5 text-center">
-              <img class="img-fluid modal-image" alt="">
-            </div>
-            <div class="col-md-7">
-              <h5 class="modal-price mb-2"></h5>
-              <p class="modal-description"></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Add to cart</button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <script>
-    const productModal = document.getElementById('productModal');
-    productModal.addEventListener('show.bs.modal', event => {
-      const button = event.relatedTarget;
-      const title = button.getAttribute('data-title');
-      const price = button.getAttribute('data-price');
-      const description = button.getAttribute('data-description');
-      const imageSrc = button.getAttribute('data-image');
-
-      const modalTitle = productModal.querySelector('.modal-title');
-      const modalPrice = productModal.querySelector('.modal-price');
-      const modalDescription = productModal.querySelector('.modal-description');
-      const modalImage = productModal.querySelector('.modal-image');
-
-      modalTitle.textContent = title;
-      modalPrice.textContent = price;
-      modalDescription.textContent = description;
-      modalImage.src = imageSrc;
-      modalImage.alt = title || 'Product image';
-      modalImage.onerror = () => {
-        modalImage.src = '../images/placeholder.png'; // add a placeholder image in your project
-      };
-    });
-  </script>
+                const title = product.name;
+                const price = product.price;
+                const description = product.description;
+                const imageSrc = `../images/women/${product.name.toLowerCase()}.jpg`;
+                const downloadLink = `../docs/Product_Sheet_${product.id}.docx`;
+                const modal = $(".modal");
+                modal.find('.modal-title').text(title);
+                modal.find('.modal-brand').text(product.brand);
+                modal.find('.modal-price').text(price);
+                modal.find('.modal-description').text(description);
+                modal.find('.modal-image').attr('src', imageSrc).attr('alt', title);
+                modal.find('.modal-rating').text(generateStars(product.review.rating));
+                modal.find('.modal-review').text(`review: "${product.review.summary}"`);
+                const ingredientsList = modal.find('.modal-ingredients');
+                ingredientsList.empty();
+                product.ingredients.forEach(ingredient => {
+                    ingredientsList.append(`<li>${ingredient}</li>`);
+                });
+                modal.find('.modal-download-btn').off('click').on('click', function () {
+                    window.location.href = downloadLink;
+                });
+            });
+        });
+    </script>
 
 
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <h3>Contact Us</h3>
-    <p>123 Fragrance Lane, Luxury District, City</p>
-    <p>Email: <a href="mailto:info@paareesperfumes.com">info@paareesperfumes.com</a></p>
-    <p style="margin-top:20px; font-size: 0.8rem; opacity: 0.6;">
-      &copy; 2024 Paarees Perfumes eProject
-    </p>
-  </footer>
+    <!-- FOOTER -->
+    <footer id="contact">
+        <h3>Contact Us</h3>
+        <p>123 Fragrance Lane, Luxury District, City</p>
+        <p>Email: <a href="mailto:info@paareesperfumes.com">info@paareesperfumes.com</a></p>
+        <p style="margin-top:20px; font-size: 0.8rem; opacity: 0.6;">
+            &copy; 2024 Paarees Perfumes eProject
+        </p>
+    </footer>
 
-  <!-- BOOTSTRAP JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
 </body>
 
 </html>

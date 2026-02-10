@@ -235,9 +235,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll gap-2" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown" style="color: var(--gold); border-bottom: 2px solid var(--gold);">
                         <a class="nav-link dropdown-toggle fw-500" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false" style="color: white;">
+                            aria-expanded="false" style="color: var(--gold);">
                             Brands
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-columns">
@@ -247,8 +247,7 @@
                         <a class="nav-link fw-500" href="ladies.html" style="color: white;">Ladies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-500" href="gents.html"
-                            style="color: var(--gold); border-bottom: 2px solid var(--gold);">Gents</a>
+                        <a class="nav-link fw-500" href="gents.html" style="color: white;">Gents</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-500" href="common.html" style="color: white;">Common</a>
@@ -267,13 +266,35 @@
     </nav>
     <script>
         $(document).ready(function () {
-            // Highlight the current page in the navbar
             $.getJSON("../data.json", function (data) {
                 brand_names = [...new Set(data.map(product => product.brand))];
-                console.log(brand_names);
+                console.log(brand_names.toString());
                 brand_names.forEach(brand => {
-                    $(".navbar-nav .dropdown-menu").append(`<li><a class="dropdown-item" href="../categories/brand.html?brand=${encodeURIComponent(brand)}">${brand}</a></li>`);
+                    $(".navbar-nav .dropdown-menu").append(`<li><a class="dropdown-item" href="brand.html?brand=${encodeURIComponent(brand)}">${brand}</a></li>`);
                 });
+            });
+        });
+    </script>
+
+    <!-- BRAND DETAIL -->
+    <section>
+        <div class="container my-5 brand-detail">
+            <img src="" alt="" id="brand-img" class="mx-auto d-block ">
+            <p id="brand-description" style="text-align: center; font-style: italic;"></p>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("../brands.json", function (data) {
+                const brandName = new URLSearchParams(window.location.search).get('brand');
+                if (data[brandName]) {
+                    $("#brand-description").text(data[brandName]);
+                    const imgSrc = `../images/brands/${brandName.toLowerCase()}.png`;
+                    $("#brand-img").attr("src", imgSrc);
+                } else {
+                    $("#brand-name").text("Brand Not Found");
+                    $("#brand-description").text("Sorry, we couldn't find information about this brand.");
+                };
             });
         });
     </script>
@@ -281,20 +302,21 @@
     <!-- PRODUCT-CARDS -->
     <section class="product-cards my-5">
         <div class="container">
+            <h3 class="text-center mb-4" id="brand-title">Brand products</h3>
             <div class="row g-2"></div>
     </section>
 
     <script>
         $(document).ready(function () {
             $.getJSON("../data.json", function (data) {
-                const menProducts = data.filter(product => product.gender === "Men");
+                const menProducts = data.filter(product => product.brand === new URLSearchParams(window.location.search).get('brand'));
                 let productCardsHtml = '';
                 menProducts.forEach(product => {
                     productCardsHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
               <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal"
                 data-id="${product.id}">
-                <img src="../images/men/${product.name.toLowerCase()}.jpg" class="card-img-top card-img" alt="${product.description}">
+                <img src="../images/${product.gender.toLowerCase()}/${product.name.toLowerCase()}.jpg" class="card-img-top card-img" alt="${product.description}">
                 <div class="card-body text-center">
                   <h5 class="card-title">${product.name}</h5>
                   <p class="card-price">${product.price}</p>
@@ -369,7 +391,7 @@
                 const title = product.name;
                 const price = product.price;
                 const description = product.description;
-                const imageSrc = `../images/men/${product.name.toLowerCase()}.jpg`;
+                const imageSrc = `../images/${product.gender.toLowerCase()}/${product.name.toLowerCase()}.jpg`;
                 const downloadLink = `../docs/Product_Sheet_${product.id}.docx`;
                 const modal = $(".modal");
                 modal.find('.modal-title').text(title);

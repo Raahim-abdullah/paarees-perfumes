@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "name": "No. 5 Eau de Parfum",
+    "brand": "Chanel",
+    "price": "$174.00",
+    "gender": "Women",
+    "description": "The essence of femininity. A powdery floral bouquet.",
+    "ingredients": ["Aldehydes", "Jasmine", "May Rose"],
+    "review": {"rating": 4.8, "summary": "Timeless and sophisticated."}
+  },
+  {
+    "id": 2,
+    "name": "Sauvage",
+    "brand": "Dior",
+    "price": "$145.00",
+    "gender": "Men",
+    "description": "A radically fresh composition inspired by wide-open spaces.",
+    "ingredients": ["Bergamot", "Ambroxan", "Sichuan Pepper"],
+    "review": {"rating": 4.8, "summary": "An absolute compliment magnet with high projection."}
+  },
+  {
+    "id": 3,
+    "name": "Baccarat Rouge 540",
+    "brand": "Maison Francis Kurkdjian",
+    "price": "$325.00",
+    "gender": "Common",
+    "description": "A poetic alchemy of jasmine, saffron, and ambergris.",
+    "ingredients": ["Saffron", "Jasmine", "Amberwood", "Cedar"],
+    "review": {"rating": 4.9, "summary": "Smells like pure luxury; incredible sillage."}
+  },
+  {
+    "id": 4,
+    "name": "Black Opium",
+    "brand": "Yves Saint Laurent",
+    "price": "$155.00",
+    "gender": "Women",
+    "description": "An addictive gourmand with notes of black coffee and vanilla.",
+    "ingredients": ["Black Coffee", "White Flowers", "Vanilla"],
+    "review": {"rating": 4.7, "summary": "Sensual, dark, and energetic."}
+  },
+  {
+    "id": 5,
+    "name": "Bleu de Chanel",
+    "brand": "Chanel",
+    "price": "$154.00",
+    "gender": "Men",
+    "description": "A tribute to masculine freedom in an aromatic-woody trail.",
+    "ingredients": ["Grapefruit", "Cedar", "Sandalwood"],
+    "review": {"rating": 4.9, "summary": "The ultimate versatile blue scent for any occasion."}
+  },
+  {
+    "id": 6,
+    "name": "Santal 33",
+    "brand": "Le Labo",
+    "price": "$310.00",
+    "gender": "Common",
+    "description": "The soft drift of smoke and an open fire.",
+    "ingredients": ["Sandalwood", "Cardamom", "Leather", "Violet"],
+    "review": {"rating": 4.6, "summary": "Iconic and woody; defines niche perfumery for many."}
+  },
+  {
+    "id": 7,
+    "name": "Good Girl",
+    "brand": "Carolina Herrera",
+    "price": "$144.00",
+    "gender": "Women",
+    "description": "A bold blend of dark and light elements.",
+    "ingredients": ["Tuberose", "Tonka Bean", "Cocoa", "Jasmine"],
+    "review": {"rating": 4.6, "summary": "Sexy and powerful; perfect for evening wear."}
+  },
+  {
+    "id": 8,
+    "name": "Eros",
+    "brand": "Versace",
+    "price": "$105.00",
+    "gender": "Men",
+    "description": "Love, passion, beauty, and desire in a bottle.",
+    "ingredients": ["Mint", "Green Apple", "Vanilla", "Ambrosan"],
+    "review": {"rating": 4.6, "summary": "Sweet and loud; excellent for clubbing."}
+  },
+  {
+    "id": 9,
+    "name": "Tobacco Vanille",
+    "brand": "Tom Ford",
+    "price": "$295.00",
+    "gender": "Common",
+    "description": "A warm English gentleman’s club with spiced tobacco.",
+    "ingredients": ["Tobacco Leaf", "Vanilla", "Cacao", "Tonka Bean"],
+    "review": {"rating": 4.7, "summary": "Opulent, cozy, and extremely high quality."}
+  },
+  {
+    "id": 10,
+    "name": "J'adore",
+    "brand": "Dior",
+    "price": "$160.00",
+    "gender": "Women",
+    "description": "A grand feminine floral with a balanced bouquet.",
+    "ingredients": ["Ylang-ylang", "Damascus Rose", "Jasmine"],
+    "review": {"rating": 4.8, "summary": "Radiant, golden, and universally loved."}
+  },
+  {
+    "id": 11,
+    "name": "Acqua di Gio",
+    "brand": "Giorgio Armani",
+    "price": "$115.00",
+    "gender": "Men",
+    "description": "Inspired by the sea, air, and sun.",
+    "ingredients": ["Marine Notes", "Bergamot", "Persimmon"],
+    "review": {"rating": 4.7, "summary": "The benchmark for aquatic, fresh fragrances."}
+  },
+  {
+    "id": 12,
+    "name": "Angels' Share",
+    "brand": "Kilian Paris",
+    "price": "$255.00",
+    "gender": "Common",
+    "description": "A cocktail of boozy cognac and sweet cinnamon.",
+    "ingredients": ["Cognac", "Cinnamon", "Oak", "Praline"],
+    "review": {"rating": 4.9, "summary": "Masterpiece gourmand that smells like warm apple pie."}
+  },
+  {
+    "id": 13,
+    "name": "Delina",
+    "brand": "Parfums de Marly",
+    "price": "$375.00",
+    "gender": "Women",
+    "description": "A modern, nuanced floral bouquet.",
+    "ingredients": ["Turkish Rose", "Lychee", "Rhubarb"],
+    "review": {"rating": 4.9, "summary": "The 'it-girl' rose scent; feminine and potent."}
+  },
+  {
+    "id": 14,
+    "name": "Aventus",
+    "brand": "Creed",
+    "price": "$495.00",
+    "gender": "Men",
+    "description": "Audacious, contemporary, and confident.",
+    "ingredients": ["Pineapple", "Birch", "Oakmoss", "Patchouli"],
+    "review": {"rating": 4.7, "summary": "Expensive but unrivaled in its masculine DNA."}
+  },
+  {
+    "id": 15,
+    "name": "Lost Cherry",
+    "brand": "Tom Ford",
+    "price": "$395.00",
+    "gender": "Common",
+    "description": "A full-bodied journey into the once-forbidden fruit.",
+    "ingredients": ["Black Cherry", "Bitter Almond", "Tonka Bean"],
+    "review": {"rating": 4.5, "summary": "Rich, dark, and syrupy, though longevity is moderate."}
+  },
+  {
+    "id": 16,
+    "name": "La Vie Est Belle",
+    "brand": "Lancôme",
+    "price": "$150.00",
+    "gender": "Women",
+    "description": "The fragrance of joy and happiness.",
+    "ingredients": ["Iris", "Patchouli", "Spun Sugar"],
+    "review": {"rating": 4.7, "summary": "Sweet and incredibly long-lasting floral gourmand."}
+  },
+  {
+    "id": 17,
+    "name": "Le Male Elixir",
+    "brand": "Jean Paul Gaultier",
+    "price": "$145.00",
+    "gender": "Men",
+    "description": "A burning intensity of wood and spices.",
+    "ingredients": ["Lavender", "Tonka Bean", "Benzoin", "Honey"],
+    "review": {"rating": 4.9, "summary": "Warm, honeyed, and currently trending on social media."}
+  },
+  {
+    "id": 18,
+    "name": "Jazz Club",
+    "brand": "Maison Margiela",
+    "price": "$165.00",
+    "gender": "Common",
+    "description": "Memory of cocktails and cigars in a Brooklyn club.",
+    "ingredients": ["Rum", "Tobacco", "Pink Pepper", "Vanilla"],
+    "review": {"rating": 4.7, "summary": "Cozy and slightly smoky lounge vibe."}
+  },
+  {
+    "id": 19,
+    "name": "Goddess",
+    "brand": "Burberry",
+    "price": "$168.00",
+    "gender": "Women",
+    "description": "A unique aromatic gourmand featuring three vanillas.",
+    "ingredients": ["Vanilla Infusion", "Vanilla Caviar", "Lavender"],
+    "review": {"rating": 4.7, "summary": "The ultimate comfort scent for vanilla lovers."}
+  },
+  {
+    "id": 20,
+    "name": "Oud Wood",
+    "brand": "Tom Ford",
+    "price": "$310.00",
+    "gender": "Men",
+    "description": "Pioneering composition of exotic woods and spices.",
+    "ingredients": ["Oud", "Sandalwood", "Cardamom"],
+    "review": {"rating": 4.8, "summary": "Professional, dry, and highly sophisticated."}
+  },
+  {
+    "id": 21,
+    "name": "You",
+    "brand": "Glossier",
+    "price": "$78.00",
+    "gender": "Common",
+    "description": "Personalized scent that smells different on everyone.",
+    "ingredients": ["Pink Pepper", "Iris", "Ambrox"],
+    "review": {"rating": 4.4, "summary": "The perfect 'no-perfume' perfume."}
+  },
+  {
+    "id": 22,
+    "name": "Libre",
+    "brand": "Yves Saint Laurent",
+    "price": "$155.00",
+    "gender": "Women",
+    "description": "The scent of freedom for a modern woman.",
+    "ingredients": ["Lavender", "Orange Blossom", "Musk"],
+    "review": {"rating": 4.7, "summary": "Powerful, clean, and professional."}
+  },
+  {
+    "id": 23,
+    "name": "The Most Wanted",
+    "brand": "Azzaro",
+    "price": "$115.00",
+    "gender": "Men",
+    "description": "A magnetic and sophisticated woody-spicy scent.",
+    "ingredients": ["Cardamom", "Toffee", "Amberwood"],
+    "review": {"rating": 4.8, "summary": "A delicious gourmand for men that lasts all night."}
+  },
+  {
+    "id": 24,
+    "name": "Wood Sage & Sea Salt",
+    "brand": "Jo Malone",
+    "price": "$165.00",
+    "gender": "Common",
+    "description": "Windswept walks along the English coast.",
+    "ingredients": ["Sea Salt", "Sage", "Ambrette Seed"],
+    "review": {"rating": 4.5, "summary": "Airy and fresh; great for layering."}
+  },
+  {
+    "id": 25,
+    "name": "Born in Roma",
+    "brand": "Valentino",
+    "price": "$156.00",
+    "gender": "Women",
+    "description": "A couture floriental celebrating your roots.",
+    "ingredients": ["Jasmine Sambac", "Vanilla Bourbon", "Blackcurrant"],
+    "review": {"rating": 4.8, "summary": "Trendy and youthfully elegant."}
+  },
+  {
+    "id": 26,
+    "name": "Spicebomb Extreme",
+    "brand": "Viktor&Rolf",
+    "price": "$150.00",
+    "gender": "Men",
+    "description": "A massive spicy amber explosion.",
+    "ingredients": ["Black Pepper", "Tobacco", "Vanilla", "Cumin"],
+    "review": {"rating": 4.9, "summary": "A winter staple with nuclear performance."}
+  },
+  {
+    "id": 27,
+    "name": "Molecule 01",
+    "brand": "Escentric Molecules",
+    "price": "$150.00",
+    "gender": "Common",
+    "description": "A minimalist aroma that works with your pheromones.",
+    "ingredients": ["Iso E Super"],
+    "review": {"rating": 4.6, "summary": "Subtle, magnetic, and very clean."}
+  },
+  {
+    "id": 28,
+    "name": "Coco Mademoiselle",
+    "brand": "Chanel",
+    "price": "$174.00",
+    "gender": "Women",
+    "description": "The essence of a bold, free woman.",
+    "ingredients": ["Orange", "Patchouli", "Turkish Rose"],
+    "review": {"rating": 4.9, "summary": "The gold standard for modern feminine elegance."}
+  },
+  {
+    "id": 29,
+    "name": "Terre d'Hermès",
+    "brand": "Hermès",
+    "price": "$145.00",
+    "gender": "Men",
+    "description": "A symbolic narrative exploring the earth and sky.",
+    "ingredients": ["Orange", "Flint", "Vetiver", "Benzoin"],
+    "review": {"rating": 4.8, "summary": "Masterful earthy citrus for the mature gentleman."}
+  },
+  {
+    "id": 30,
+    "name": "Naxos",
+    "brand": "Xerjoff",
+    "price": "$250.00",
+    "gender": "Common",
+    "description": "A tribute to the deep heart of Sicily.",
+    "ingredients": ["Honey", "Tobacco", "Lavender", "Citrus"],
+    "review": {"rating": 4.9, "summary": "The best honey-tobacco fragrance ever made."}
+  },
+  {
+    "id": 31,
+    "name": "Daisy",
+    "brand": "Marc Jacobs",
+    "price": "$101.00",
+    "gender": "Women",
+    "description": "A whimsical, bright, and charming floral.",
+    "ingredients": ["Strawberry", "Violet Leaves", "Jasmine"],
+    "review": {"rating": 4.5, "summary": "Youthful, fresh, and universally pleasing."}
+  },
+  {
+    "id": 32,
+    "name": "Y Eau de Parfum",
+    "brand": "Yves Saint Laurent",
+    "price": "$155.00",
+    "gender": "Men",
+    "description": "The scent of accomplishment for the creative man.",
+    "ingredients": ["Sage", "Apple", "Ginger", "Cedar"],
+    "review": {"rating": 4.7, "summary": "Excellent performance and very mass-appealing."}
+  },
+  {
+    "id": 33,
+    "name": "Philosykos",
+    "brand": "Diptyque",
+    "price": "$175.00",
+    "gender": "Common",
+    "description": "Memory of a Greek summer at Mount Pelion.",
+    "ingredients": ["Fig Leaf", "Fig Tree Sap", "White Cedar"],
+    "review": {"rating": 4.8, "summary": "The most realistic fig scent in the world."}
+  },
+  {
+    "id": 34,
+    "name": "Flowerbomb",
+    "brand": "Viktor&Rolf",
+    "price": "$180.00",
+    "gender": "Women",
+    "description": "An explosive floral bouquet that makes everything positive.",
+    "ingredients": ["Cattleya Orchid", "Freesia", "Rose", "Patchouli"],
+    "review": {"rating": 4.8, "summary": "Sweet, strong, and ultra-feminine."}
+  },
+  {
+    "id": 35,
+    "name": "Light Blue Pour Homme",
+    "brand": "Dolce&Gabbana",
+    "price": "$115.00",
+    "gender": "Men",
+    "description": "Captures the fresh spirit of the Mediterranean.",
+    "ingredients": ["Juniper", "Grapefruit", "Oakmoss", "Pepper"],
+    "review": {"rating": 4.4, "summary": "A summer classic that never goes out of style."}
+  },
+  {
+    "id": 36,
+    "name": "Imagination",
+    "brand": "Louis Vuitton",
+    "price": "$320.00",
+    "gender": "Common",
+    "description": "An infinite creative impulse driven by citrus and tea.",
+    "ingredients": ["Citron", "Black Tea", "Ambrosan", "Cinnamon"],
+    "review": {"rating": 4.9, "summary": "The pinnacle of high-end fresh fragrances."}
+  },
+  {
+    "id": 37,
+    "name": "Born in Roma Donna",
+    "brand": "Valentino",
+    "price": "$156.00",
+    "gender": "Women",
+    "description": "A high-fashion floriental made of three jasmines.",
+    "ingredients": ["Jasmine", "Vanilla Bourbon", "Blackcurrant"],
+    "review": {"rating": 4.8, "summary": "Perfectly balanced sweetness with an edgy twist."}
+  },
+  {
+    "id": 38,
+    "name": "Explorer",
+    "brand": "Montblanc",
+    "price": "$115.00",
+    "gender": "Men",
+    "description": "A woody-aromatic-leather scent for the adventurer.",
+    "ingredients": ["Bergamot", "Vetiver", "Patchouli"],
+    "review": {"rating": 4.6, "summary": "A high-quality, budget-friendly Creed Aventus alternative."}
+  },
+  {
+    "id": 39,
+    "name": "Khamrah",
+    "brand": "Lattafa",
+    "price": "$45.00",
+    "gender": "Common",
+    "description": "An oriental vanilla spicy fragrance with a warm trail.",
+    "ingredients": ["Dates", "Cinnamon", "Vanilla", "Amber"],
+    "review": {"rating": 4.7, "summary": "Incredible value; smells much more expensive than it is."}
+  },
+  {
+    "id": 40,
+    "name": "L'Interdit",
+    "brand": "Givenchy",
+    "price": "$136.00",
+    "gender": "Women",
+    "description": "A tribute to bold femininity and the thrill of the forbidden.",
+    "ingredients": ["Orange Blossom", "Jasmine", "Patchouli", "Vetiver"],
+    "review": {"rating": 4.7, "summary": "Classy, dark floral with major longevity."}
+  },
+  {
+    "id": 41,
+    "name": "Luna Rossa Ocean",
+    "brand": "Prada",
+    "price": "$125.00",
+    "gender": "Men",
+    "description": "A neo-fresh fragrance exploring new horizons.",
+    "ingredients": ["Bergamot", "Iris", "Vetiver", "Saffron"],
+    "review": {"rating": 4.5, "summary": "Clean, soapy, and modern."}
+  },
+  {
+    "id": 42,
+    "name": "Missing Person",
+    "brand": "Phlur",
+    "price": "$99.00",
+    "gender": "Common",
+    "description": "A skin scent that evokes the memory of a loved one.",
+    "ingredients": ["Skin Musk", "Sheer Jasmine", "Sandalwood"],
+    "review": {"rating": 4.2, "summary": "Intimate and clean; feels like a warm hug."}
+  },
+  {
+    "id": 43,
+    "name": "Cheirosa 62",
+    "brand": "Sol de Janeiro",
+    "price": "$38.00",
+    "gender": "Women",
+    "description": "Summer in a bottle inspired by the beaches of Rio.",
+    "ingredients": ["Pistachio", "Salted Caramel", "Vanilla"],
+    "review": {"rating": 4.9, "summary": "Extremely addictive and youthful tropical scent."}
+  },
+  {
+    "id": 44,
+    "name": "Stronger With You",
+    "brand": "Emporio Armani",
+    "price": "$115.00",
+    "gender": "Men",
+    "description": "A charming, mysterious, and confident fragrance.",
+    "ingredients": ["Cardamom", "Chestnut", "Vanilla", "Sage"],
+    "review": {"rating": 4.8, "summary": "Warm, nutty, and sweet; a fall/winter favorite."}
+  },
+  {
+    "id": 45,
+    "name": "Gypsy Water",
+    "brand": "Byredo",
+    "price": "$225.00",
+    "gender": "Common",
+    "description": "A fever dream of nomadic life in the woods.",
+    "ingredients": ["Juniper Berries", "Lemon", "Pine Needle", "Vanilla"],
+    "review": {"rating": 4.6, "summary": "Woody, ethereal, and very unique."}
+  },
+  {
+    "id": 46,
+    "name": "Alien",
+    "brand": "Mugler",
+    "price": "$185.00",
+    "gender": "Women",
+    "description": "A solar, mystical fragrance from another world.",
+    "ingredients": ["Jasmine Sambac", "Cashmeran Wood", "White Amber"],
+    "review": {"rating": 4.6, "summary": "One of the most unique and potent jasmines ever made."}
+  },
+  {
+    "id": 47,
+    "name": "Polo 67",
+    "brand": "Ralph Lauren",
+    "price": "$108.00",
+    "gender": "Men",
+    "description": "The spirit of athletic excellence and masculine power.",
+    "ingredients": ["Bergamot", "Pineapple", "Vetiver"],
+    "review": {"rating": 4.6, "summary": "The latest sporty-fresh release from Ralph Lauren."}
+  },
+  {
+    "id": 48,
+    "name": "Oud Satin Mood",
+    "brand": "Maison Francis Kurkdjian",
+    "price": "$330.00",
+    "gender": "Common",
+    "description": "A shimmering oriental fragrance that mimics satin on skin.",
+    "ingredients": ["Oud", "Bulgarian Rose", "Violet", "Vanilla"],
+    "review": {"rating": 4.8, "summary": "Luxurious, powdery rose and oud with beastly performance."}
+  },
+  {
+    "id": 49,
+    "name": "Cloud",
+    "brand": "Ariana Grande",
+    "price": "$65.00",
+    "gender": "Women",
+    "description": "An uplifting, artistic expression of positivity.",
+    "ingredients": ["Lavender", "Pear", "Coconut Cream", "Praline"],
+    "review": {"rating": 4.5, "summary": "Fluffy, sweet, and often compared to high-end niche scents."}
+  },
+  {
+    "id": 50,
+    "name": "Vanilla 28",
+    "brand": "Kayali",
+    "price": "$150.00",
+    "gender": "Women",
+    "description": "A masterpiece of refined and cultivated nuance.",
+    "ingredients": ["Vanilla Orchid", "Brown Sugar", "Amber"],
+    "review": {"rating": 4.6, "summary": "Boozy, sweet, and the ultimate layering vanilla."}
+  }
+]

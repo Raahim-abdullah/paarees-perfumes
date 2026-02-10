@@ -248,10 +248,10 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-500" href="gents.html"
-                            style="color: var(--gold); border-bottom: 2px solid var(--gold);">Gents</a>
+                            style="color: white;">Gents</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-500" href="common.html" style="color: white;">Common</a>
+                        <a class="nav-link fw-500" href="common.html" style="color: var(--gold); border-bottom: 2px solid var(--gold);">Common</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-500" href="../docs/price-list.pdf" download style="color: white;">Price
@@ -287,14 +287,14 @@
     <script>
         $(document).ready(function () {
             $.getJSON("../data.json", function (data) {
-                const menProducts = data.filter(product => product.gender === "Men");
+                const commonProducts = data.filter(product => product.gender === "Common");
                 let productCardsHtml = '';
-                menProducts.forEach(product => {
+                commonProducts.forEach(product => {
                     productCardsHtml += `
             <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
               <div class="card product-card" data-bs-toggle="modal" data-bs-target="#productModal"
                 data-id="${product.id}">
-                <img src="../images/men/${product.name.toLowerCase()}.jpg" class="card-img-top card-img" alt="${product.description}">
+                <img src="../images/common/${product.name.toLowerCase()}.jpg" class="card-img-top card-img" alt="${product.description}">
                 <div class="card-body text-center">
                   <h5 class="card-title">${product.name}</h5>
                   <p class="card-price">${product.price}</p>
@@ -369,7 +369,7 @@
                 const title = product.name;
                 const price = product.price;
                 const description = product.description;
-                const imageSrc = `../images/men/${product.name.toLowerCase()}.jpg`;
+                const imageSrc = `../images/common/${product.name.toLowerCase()}.jpg`;
                 const downloadLink = `../docs/Product_Sheet_${product.id}.docx`;
                 const modal = $(".modal");
                 modal.find('.modal-title').text(title);
@@ -387,7 +387,6 @@
                 modal.find('.modal-download-btn').off('click').on('click', function () {
                     window.location.href = downloadLink;
                 });
-
             });
         });
     </script>
